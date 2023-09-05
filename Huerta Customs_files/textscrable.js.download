@@ -5,4 +5,4 @@ update(){let output='';let complete=0;for(let i=0,n=this.queue.length;i<n;i++){l
 output+=`<span class="dud">${char}</span>`;}else{output+=from;}}
 this.el.innerHTML=output;if(complete===this.queue.length){this.resolve();}else{this.frameRequest=requestAnimationFrame(this.update);this.frame++;}}
 randomChar(){return this.chars[Math.floor(Math.random()*this.chars.length)];}}
-const phrases=['All your favorite socials...','All in one place.','Tons of platforms.','Tons of customization.','All for free.','Get started now!'];const el=document.querySelector('.hero-text-description');const fx=new TextScramble(el);let counter=0;const next=()=>{fx.setText(phrases[counter]).then(()=>{setTimeout(next,800);});counter=(counter+1)%phrases.length;};next();
+const phrases=['Quality Clothing','All in one place.','Tons of Designs.','Tons of customization.','All for the best prices.','Coming Soon!'];const el=document.querySelector('.hero-text-description');const fx=new TextScramble(el);let counter=0;const next=()=>{fx.setText(phrases[counter]).then(()=>{setTimeout(next,800);});counter=(counter+1)%phrases.length;};next();
